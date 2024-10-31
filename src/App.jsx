@@ -9,6 +9,7 @@ function useCounter() {
 
   function increaseCount() {
     setCount(count + 1);
+    console.log(count);
   }
 
   return {
@@ -18,6 +19,16 @@ function useCounter() {
 }
 
 function App() {
+  return (
+    <>
+      <Counter></Counter>
+      <Counter></Counter>
+      <Counter></Counter>
+    </>
+  );
+}
+
+function Counter() {
   const { count, increaseCount } = useCounter();
 
   return (
